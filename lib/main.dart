@@ -1,22 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:registration_page_firebase_auth/loginPage.dart';
+import 'package:registration_page_firebase_auth/loginPage.dart'; // Import LoginPage
+import 'package:registration_page_firebase_auth/signUpPage.dart'; // Import SignUpPage
+import 'package:registration_page_firebase_auth/welcomePage.dart'; // Import WelcomePage
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'RegistrationScreen User Interface',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        primarySwatch: Colors.blue,
       ),
-      home: const LoginPage(),
+      // Define navigation routes
+      initialRoute: '/login', // Set initial route to LoginPage
+      routes: {
+        '/login': (context) => LoginPage(),
+        '/signup': (context) => SignUpPage(),
+        '/welcome': (context) => WelcomePage(
+              email: 'syedmaazsaeed@gmail.com',
+            ),
+      },
     );
   }
 }
