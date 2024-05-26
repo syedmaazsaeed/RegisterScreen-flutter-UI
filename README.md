@@ -50,14 +50,10 @@ flutter run
 
 📷 **Screenshots**
 
-![Registration Sign In Screen](img/Sign_In_Screen.png)      ![Registration Sign Up Screen](img/Sign_Up_Screen.png)  
-*Image 1: Registration Sign In Screen*                       *Image 2: Registration Sign Up Screen*
+📷 **Screenshots**
 
----
-![Registration Welcome Screen](img/welcome-screen.png)  
-*Image 3: Registration Welcome Screen*
-
-
+![Registration Sign In Screen](img/Sign_In_Screen.png)    ![Registration Sign Up Screen](img/Sign_Up_Screen.png)       ![Registration Welcome Screen](img/welcome-screen.png)  
+*Image 1: Registration Sign In Screen*             *Image 2: Registration Sign Up Screen*                       *Image 3: Registration Welcome Screen*
 
 
 **Project Structure**
