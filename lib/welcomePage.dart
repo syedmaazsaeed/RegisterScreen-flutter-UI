@@ -20,7 +20,7 @@ class WelcomePage extends StatelessWidget {
                 height: h * 0.3,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("img/signup.png"),
+                    image: AssetImage("img/images.png"),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -28,10 +28,11 @@ class WelcomePage extends StatelessWidget {
                   children: [
                     SizedBox(
                       height: h * 0.16,
+
                     ),
                     const CircleAvatar(
                       backgroundColor: Colors.white70,
-                      radius: 60,
+                      radius: 52,
                       backgroundImage: AssetImage("img/download.png"),
                     )
                   ],
@@ -49,25 +50,63 @@ class WelcomePage extends StatelessWidget {
                     const Text(
                       "Welcome",
                       style: TextStyle(
-                          fontSize: 36,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black54),
+                        fontSize: 39,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 10),
+                    Text(
+                      "Email: ",
+                      style: TextStyle(
+                        fontSize: 35,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
                     Text(
                       email,
                       style: const TextStyle(
-                          fontSize: 17,
-                          color: Color.fromARGB(255, 216, 124, 124)),
+                        fontSize: 23,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.red,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 10),
+                    RichText(
+                      textAlign: TextAlign.center,
+                      text: TextSpan(
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                        children: [
+                          const TextSpan(
+                            text: "Password: ",
+                          ),
+                          TextSpan(
+                            text: "\n123456",
+                            style: TextStyle(
+                              color: Colors.red,
+
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
               ),
               const SizedBox(
-                height: 210,
+                height: 60,
               ),
               GestureDetector(
                 onTap: () {
-                  // Navigate back to the login page
+                  //You can  Navigate back to the login page.....
                   Navigator.pushReplacementNamed(context, '/login');
                 },
                 child: Container(
@@ -75,10 +114,15 @@ class WelcomePage extends StatelessWidget {
                   height: h * 0.08,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    image: const DecorationImage(
-                      image: AssetImage("img/loginbtn.png"),
-                      fit: BoxFit.cover,
-                    ),
+                    color: Colors.black,
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 10,
+                        spreadRadius: 7,
+                        offset: const Offset(1, 1),
+                        color: Colors.grey.withOpacity(0.2),
+                      ),
+                    ],
                   ),
                   child: const Center(
                     child: Text(
@@ -92,6 +136,7 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(height: 50),
             ],
           ),
         ),

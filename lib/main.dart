@@ -16,8 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // Define navigation routes
-      initialRoute: '/login', // Set initial route to LoginPage
+      initialRoute: '/login',
       routes: {
         '/login': (context) => LoginPage(),
         '/signup': (context) => SignUpPage(),
